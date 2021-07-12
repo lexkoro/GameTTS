@@ -9,6 +9,7 @@ import tkinter as tk
 from tkinter import filedialog
 import traceback
 import platform
+import gdown
 
 
 plt = platform.system()
@@ -35,7 +36,14 @@ try:
 
     synthesizer = Synthesizer()
     synthesizer.load_config(TTS_CONFIG_PATH)
-    synthesizer.load_model(TTS_MODEL_PATH)
+
+    if TTS_MODEL_PATH.exists():
+        synthesizer.load_model(TTS_MODEL_PATH)
+    else:
+        url = 'https://drive.google.com/uc?id=1XSc2Fl-VsSrduxthueIBvpENo4vZtzdE'
+        gdown.download(url, str(TTS_MODEL_PATH), quiet=False)
+        synthesizer.load_model(TTS_MODEL_PATH)
+        
     synthesizer.init_speaker_map(SPEAKER_CONFIG)
 
 except ImportError as err:
@@ -59,8 +67,13 @@ def create_samples():
 def synthesize(text, speaker_id, speaker_name, params):
     audio_data = synthesizer.synthesize(text, speaker_id, params)
     cur_timestamp = datetime.now().strftime("%m%d%f")
+    tmp_path = Path("static_web", "tmp")
+
+    if not tmp_path.exists():
+        tmp_path.mkdir()
+        
     file_name = "_".join([str(speaker_id), speaker_name, str(cur_timestamp), "tmp_file.wav"])
-    tmp_file_path = Path("static_web", "tmp", file_name)
+    tmp_file_path = Path(tmp_path, file_name)
     write(tmp_file_path, 22050, audio_data)
 
     if params["out_path"]:
