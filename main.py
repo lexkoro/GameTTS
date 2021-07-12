@@ -59,11 +59,8 @@ def create_samples():
 def synthesize(text, speaker_id, speaker_name, params):
     audio_data = synthesizer.synthesize(text, speaker_id, params)
     cur_timestamp = datetime.now().strftime("%m%d%f")
-    file_name = Path(
-        "tmp",
-        "_".join([str(speaker_id), speaker_name, str(cur_timestamp), "tmp_file.wav"]),
-    )
-    tmp_file_path = Path("static_web", file_name)
+    file_name = "_".join([str(speaker_id), speaker_name, str(cur_timestamp), "tmp_file.wav"])
+    tmp_file_path = Path("static_web", "tmp", file_name)
     write(tmp_file_path, 22050, audio_data)
 
     if params["out_path"]:
@@ -73,7 +70,7 @@ def synthesize(text, speaker_id, speaker_name, params):
         save_file_path = Path(params["out_path"], save_file_name)
         write(save_file_path, 22050, audio_data)
 
-    eel.addTableRow(speaker_name, text, str(file_name))
+    eel.addTableRow(speaker_name, text, str(Path("tmp",file_name)))
 
 
 @eel.expose
