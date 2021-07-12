@@ -8,8 +8,17 @@ if ($p -match "Python"){
     # install virtualenv  
     python -m pip install virtualenv
 
+    # create virtualenv
+    python -m virtualenv .venv
+
+    # activate virtualenv
+    .\.venv\Scripts\activate
+
     # install dependencies
     python -m pip install -r .\requirements.txt
+
+    # deactivate virtualenv
+    deactivate
 }else{
     Write-Host "No Python installation found"
 }
