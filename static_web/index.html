@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="icon" type="image/png" href="img/message.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+        Text-To-Speech GUI
+    </title>
+
+    <!-- Font Awesome -->
+    <link href="css/all.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="css/font-google.css" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="css/mdb.min.css" rel="stylesheet" />
+
+
+    <!-- Include eel.js - note this file doesn't exist in the 'web' directory -->
+    <script type="text/javascript" src="/eel.js"></script>
+    <script type="text/javascript">
+
+        eel.expose(call_torch_modal);
+        function call_torch_modal() {
+            $('#no_torch_modal').modal('show')
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <!-- Tabs navs -->
+    <ul class="nav nav-tabs mb-3" id="ex1" role="tablist">
+        <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="tab" href="#ex1-tabs-1" role="tab"
+                aria-controls="ex1-tabs-1" aria-selected="true">TTS</a>
+        </li>
+        <li class="nav-item" role="presentation">
+            <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="tab" href="#ex1-tabs-2" role="tab"
+                aria-controls="ex1-tabs-2" aria-selected="false">Einstellungen</a>
+        </li>
+    </ul>
+    <!-- Tabs navs -->
+
+
+
+    <div class="container">
+        <!-- Tabs content -->
+        <div class="tab-content" id="ex1-content">
+            <div class="tab-pane fade show active" id="ex1-tabs-1" role="tabpanel" aria-labelledby="ex1-tab-1">
+
+                <div class="row mb-3">
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label for="game_dropdown">Spiel:</label>
+                            <select class="form-control selectpicker" data-style="btn btn-link" id="game_dropdown">
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="speaker_dropdown">Sprecher:</label>
+                            <div class="input-group">
+                                <select class="form-control selectpicker" data-style="btn btn-link"
+                                    id="speaker_dropdown">
+                                </select>
+                                <button type="button" class="btn btn-primary" id="play_sample_file">
+                                    <i class="fas fa-volume-up"></i>
+                                </button>
+                            </div>
+                        </div>
+                        </br>
+                        <div class="row">
+                            <div class="d-flex justify-content-end">
+
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                    <!-- Player -->
+                                    <button type="button" class="btn btn-success" id="synth_button">
+                                        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"
+                                            id="progress_spinner"></span>
+                                        Synthesize
+                                    </button>
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-dark" data-mdb-toggle="modal"
+                                        data-mdb-target="#option_modal">
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class=" col-md-8">
+                        <!-- Pills navs -->
+                        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="ex3-tab-1" data-mdb-toggle="pill" href="#ex3-pills-1"
+                                    role="tab" aria-controls="ex3-pills-1" aria-selected="true">Text</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="ex3-tab-2" data-mdb-toggle="pill" href="#ex3-pills-2" role="tab"
+                                    aria-controls="ex3-pills-2" aria-selected="false">Datei</a>
+                            </li>
+                        </ul>
+                        <!-- Pills navs -->
+                        <!-- Pills content -->
+                        <div class="tab-content" id="ex2-content">
+                            <div class="tab-pane fade show active" id="ex3-pills-1" role="tabpanel"
+                                aria-labelledby="ex3-tab-1">
+                                <label for="text_input_area">Texteingabe:</label>
+                                <textarea class="form-control" id="text_input_area" rows="4" style="padding: 0.5em">Das ist ein Blindtext zum Testen von Sprachausgabe.
+                                </textarea>
+                            </div>
+                            <div class="tab-pane fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
+                                <label for="custom_file_input">Dateiauswahl:</label>
+                                <input type="file" class="form-control" id="custom_file_input" />
+                            </div>
+                        </div>
+                        <!-- Pills content -->
+                    </div>
+                </div>
+
+
+                <div class=" row">
+                    <label for=" output_table">Ausgabe:</label>
+                    <div style="height:50vh; overflow: auto; display: block;">
+
+                        <table class="table table-striped table-sm " id="output_table">
+                            <thead class="sticky-top table-dark" style="background-color: #1266F1;">
+                                <tr>
+                                    <th scope="col">Sprecher</th>
+                                    <th scope="col">Text</th>
+                                    <th scope="col">Audio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="tab-pane fade" id="ex1-tabs-2" role="tabpanel" aria-labelledby="ex1-tab-2">
+
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="out_file_switch" />
+                    <label class="form-check-label" for="out_file_switch">Audiodateien speichern</label>
+                </div>
+
+                <div class="input-group mb-4">
+
+                    <input type="text" class="form-control" placeholder="Pfad zum Ausgabeverzeichnis"
+                        aria-label="output_save_path" aria-describedby="save_out_path_button" id='save_file_path'
+                        disabled />
+                    <button class="btn btn-outline-primary" type="button" id="save_out_path_button"
+                        data-mdb-ripple-color="dark" onclick="selectOutDir();">
+                        Auswählen
+                    </button>
+                </div>
+
+                <!-- Save Config Button -->
+                <button type="button" class="btn btn-primary btn-block" id="save_config_button">Speichern</button>
+
+            </div>
+        </div>
+        <!-- Tabs content -->
+    </div>
+
+    <!-- Torch Not Found Modal -->
+    <div class="modal fade" id="no_torch_modal" tabindex="-1" aria-labelledby="no_torch_modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="no_torch_modal_label">Fehlende PyTorch Installation</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <a href="https://pytorch.org/get-started/locally/">https://pytorch.org/get-started/locally/</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
+                        Schließen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Error Message Modal -->
+    <div class="modal fade" id="errMessageModal" tabindex="-1" aria-labelledby="errMessageModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="errMessageModalLabel">Fehler</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p id="errorMessageModal"></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-mdb-dismiss="modal">
+                        Schließen
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Options Modal -->
+    <div class="modal fade" id="option_modal" tabindex="-1" aria-labelledby="option_modal_label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="option_modal_label">Spracheinstellungen</h5>
+                    <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <label for="speech_speed_slider" class="form-label">Sprechgeschwindigkeit:</label>
+
+                            <div class="form-outline mb-4">
+                                Wert: <span id="speedSliderValue">1</span>
+
+                                <div class="range">
+                                    <input type="range" class="form-range" min="0" max="2" step="0.1"
+                                        id="speech_speed_slider" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="speech_noisea_slider" class="form-label">Varianz A:</label>
+
+                            <div class="form-outline mb-4">
+                                Wert: <span id="speech_noisea_value">0.56</span>
+                                <div class="range">
+                                    <input type="range" class="form-range" min="0" max="1" step="0.01"
+                                        id="speech_noisea_slider" />
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <label for="speech_noiseb_slider" class="form-label">Varianz B:</label>
+                            <div class="form-outline mb-4">
+                                Wert: <span id="speech_noiseb_value">0.7</span>
+
+                                <div class="range">
+                                    <input type="range" class="form-range" min="0" max="1" step="0.1"
+                                        id="speech_noiseb_slider" />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="row mb-4">
+                        <div class="col justify-content-start">
+                            <button type="button" class="btn btn-danger" id="resetSpeechSettings">
+                                Zurücksetzen
+                            </button>
+                            <button type="button" class="btn btn-primary" data-mdb-dismiss="modal">Ok</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script>
+
+        // ENABLE FOR PRODUCTION
+        // window.oncontextmenu = function (event) {
+        //     // block right-click / context-menu
+        //     event.preventDefault();
+        //     event.stopPropagation();
+        //     return false;
+        // };
+
+
+        $(document).ready(function () {
+
+            //const url = 'files/speaker_map.json';
+            let spinner = $('#progress_spinner');
+            spinner.hide();
+            let dropdown = $('#game_dropdown');
+            dropdown.empty();
+
+            const game_list = 'resource/json-mapping/game_map.json';
+
+            // Populate dropdown with list of games
+            $.getJSON(game_list, function (data) {
+                $.each(data, function (key, entry) {
+                    dropdown.append($('<option></option>').attr('value', entry).attr('id', key).text(entry + " - " + key));
+
+                })
+            });
+            dropdown.prop('selectedIndex', 0);
+            putSpeakerDropDown();
+
+            loadConfig();
+
+            $("#speech_speed_slider").val(1);
+            $("#speech_noisea_slider").val(0.56);
+            $("#speech_noiseb_slider").val(0.7);
+        });
+
+        function putSpeakerDropDown(game_id = 0) {
+            let dropdown = $('#speaker_dropdown');
+            dropdown.empty();
+            const speaker_list = 'resource/json-mapping/' + game_id + '_sorted.json';
+
+            // Populate dropdown with list of games
+            $.getJSON(speaker_list, function (data) {
+                $.each(data, function (key, entry) {
+                    dropdown.append($('<option></option>').attr('value', entry).attr('id', key).text(key + " (" + entry + ")"));
+                })
+            });
+            dropdown.prop('selectedIndex', 0);
+        };
+
+
+        $("#resetSpeechSettings").click(function () {
+            // reset speech speed to default
+            $("#speech_speed_slider").val(1);
+            $('#speedSliderValue').html($("#speech_speed_slider").val());
+
+            // reset speech varianz A to default
+            $("#speech_noisea_slider").val(0.56);
+            $('#speech_noisea_value').html($("#speech_noisea_slider").val());
+
+            // reset speech varianz B to default
+            $("#speech_noiseb_slider").val(0.7);
+            $('#speech_noiseb_value').html($("#speech_noiseb_slider").val());
+        });
+
+        $("#game_dropdown").change(function () {
+            var game_id = this.value;
+            putSpeakerDropDown(game_id);
+        });
+
+
+        $("#play_sample_file").click(function () {
+            var dropdown_speaker = document.getElementById('speaker_dropdown');
+            speaker_id = dropdown_speaker.value;
+            eel.play_sample(speaker_id);
+        });
+
+
+        $("#speech_speed_slider").change(function () {
+            $('#speedSliderValue').html($("#speech_speed_slider").val());
+        });
+
+
+        $("#speech_noisea_slider").change(function () {
+            $('#speech_noisea_value').html($("#speech_noisea_slider").val());
+        });
+
+        $("#speech_noiseb_slider").change(function () {
+            $('#speech_noiseb_value').html($("#speech_noiseb_slider").val());
+        });
+
+        async function startSynthesize(params) {
+
+
+            // enable progress spinner
+            let spinner = $('#progress_spinner');
+            spinner.show();
+
+            // check if text or file input is selected
+            let is_out_path = document.getElementById('save_file_path').value;
+            if (params.out_path_use && is_out_path) {
+                params.out_path = is_out_path;
+                console.log(params.out_path);
+            };
+
+            if (params.text_selected === "true") {
+                params.text = document.getElementById('text_input_area').value;
+                //eel.process_input(options_dict, speaker_id, speaker_name, text, null)();
+                eel.process_input(params)();
+
+            } else {
+                var file_path = document.getElementById('custom_file_input');
+                var file = file_path.files[0];
+
+                if (file === undefined) {
+                    spinner.hide();
+                } else {
+                    params.file_content = await readFile(file)
+                    eel.process_input(params)();
+                }
+            }
+        };
+
+        $("#synth_button").click(function () {
+
+            // init options dict
+            var params = new Object();
+            // get speaker_id and speaker_name
+            let dropdown_speaker = document.getElementById('speaker_dropdown');
+
+            params.speaker_id = dropdown_speaker.value;
+            params.speaker_name = dropdown_speaker.options[dropdown_speaker.selectedIndex].id;
+            params.text_selected = document.getElementById('ex3-tab-1').getAttribute("aria-selected");
+            params.out_path_use = document.getElementById('out_file_switch').checked;
+            params.speech_speed = document.getElementById('speech_speed_slider').value;
+            params.speech_var_a = document.getElementById('speech_noisea_slider').value;
+            params.speech_var_b = document.getElementById('speech_noiseb_slider').value;
+            params.text = null;
+            params.file_content = null;
+            params.out_path = null;
+
+            startSynthesize(params);
+        });
+
+
+
+        eel.expose(addTableRow);
+        function addTableRow(speaker_name, text, file_path) {
+            var row = $('<tr></tr>');
+            $('<td></td>').text(speaker_name).appendTo(row);
+            $('<td></td>').text(text).appendTo(row);
+            var audio_col = $('<td></td>').appendTo(row);
+            $('<audio id="audio-player" controls="controls" style="height: 25px; width: 250px" src="' + file_path + '" type="audio/wav">').appendTo(audio_col);
+            $("table tbody").prepend(row);
+            $(row).hide().fadeIn(500);
+        };
+
+        eel.expose(finishSynthesize);
+        function finishSynthesize() {
+            let spinner = $('#progress_spinner');
+            spinner.hide();
+        };
+
+        eel.expose(launchErrorModal);
+        async function launchErrorModal(err) {
+            console.log(err);
+            $('errorMessageModal').html(err);
+            $('#errMessageModal').modal('show');
+        };
+
+        async function selectOutDir() {
+            // Call into Python so we can access the file system
+            let out_dir = await eel.select_out_dir()();
+            $("#save_file_path").val(out_dir);
+        }
+
+        async function loadConfig() {
+            var data = await eel.load_config()();
+            $("#save_file_path").val(data.out_path);
+            $("#out_file_switch").prop("checked", data.out_path_use);
+        };
+
+        $("#save_config_button").click(async function () {
+            // init settings dict
+            var settings = new Object()
+
+            settings.out_path = document.getElementById('save_file_path').value;
+            settings.out_path_use = document.getElementById('out_file_switch').checked;
+            eel.save_config(settings)();
+        });
+
+        function readFile(file) {
+            const reader = new FileReader();
+            var text_list = [];
+
+            return new Promise((resolve, reject) => {
+                reader.onload = (event) => {
+                    const file = event.target.result;
+                    const allLines = file.split(/\r\n|\n/);
+                    // Reading line by line
+                    allLines.forEach((line) => {
+                        text_list.push(line);
+
+                    });
+                    resolve(text_list);
+                };
+
+                reader.onerror = (event) => {
+                    alert(event.target.error.name);
+                };
+
+                reader.readAsText(file);
+            });
+        };
+
+    </script>
+</body>
+
+</html>

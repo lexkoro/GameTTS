@@ -1,0 +1,9 @@
+eel
+pysbd
+pydub
+numpy
+scipy
+librosa
+unidecode
+phonemizer
+torch
