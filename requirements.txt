@@ -1,6 +1,7 @@
 eel
 pysbd
 pydub
+gdown
 numpy
 scipy
 librosa
