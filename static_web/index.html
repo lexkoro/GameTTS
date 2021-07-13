@@ -109,7 +109,8 @@
                             <div class="tab-pane fade show active" id="ex3-pills-1" role="tabpanel"
                                 aria-labelledby="ex3-tab-1">
                                 <label for="text_input_area">Texteingabe:</label>
-                                <textarea class="form-control" id="text_input_area" rows="4" style="padding: 0.5em">Das ist ein Blindtext zum Testen von Sprachausgabe.</textarea>
+                                <textarea class="form-control" id="text_input_area" rows="4"
+                                    style="padding: 0.5em">Das ist ein Blindtext zum Testen von Sprachausgabe.</textarea>
                             </div>
                             <div class="tab-pane fade" id="ex3-pills-2" role="tabpanel" aria-labelledby="ex3-tab-2">
                                 <label for="custom_file_input">Dateiauswahl:</label>
@@ -236,29 +237,32 @@
                         </div>
 
                         <div class="row">
-                            <label for="speech_noisea_slider" class="form-label">Varianz A:</label>
+                            <div class="col">
+                                <label for="speech_noisea_slider" class="form-label">Varianz A:</label>
 
-                            <div class="form-outline mb-4">
-                                Wert: <span id="speech_noisea_value">0.56</span>
-                                <div class="range">
-                                    <input type="range" class="form-range" min="0" max="1" step="0.01"
-                                        id="speech_noisea_slider" />
+                                <div class="form-outline mb-4">
+                                    Wert: <span id="speech_noisea_value">0.56</span>
+                                    <div class="range">
+                                        <input type="range" class="form-range" min="0" max="1" step="0.01"
+                                            id="speech_noisea_slider" />
+                                    </div>
+
                                 </div>
-
                             </div>
-                        </div>
 
-                        <div class="row">
-                            <label for="speech_noiseb_slider" class="form-label">Varianz B:</label>
-                            <div class="form-outline mb-4">
-                                Wert: <span id="speech_noiseb_value">0.7</span>
+                            <div class="col">
+                                <label for="speech_noiseb_slider" class="form-label">Varianz B:</label>
+                                <div class="form-outline mb-4">
+                                    Wert: <span id="speech_noiseb_value">0.7</span>
 
-                                <div class="range">
-                                    <input type="range" class="form-range" min="0" max="1" step="0.1"
-                                        id="speech_noiseb_slider" />
+                                    <div class="range">
+                                        <input type="range" class="form-range" min="0" max="1" step="0.1"
+                                            id="speech_noiseb_slider" />
+                                    </div>
+
                                 </div>
-
                             </div>
+
                         </div>
                     </div>
                 </div>

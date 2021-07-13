@@ -11,7 +11,7 @@ SPEAKER_CONFIG = Path(
     APP_FOLDER, "static_web/resource/json-mapping/", "speaker_map.json"
 )
 TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
-TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_685000.pth")
+TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_700000.pth")
 
 
 MODEL_URLS = {
