@@ -3,45 +3,23 @@ import sys
 import json
 from datetime import datetime
 from pathlib import Path
-from vits.inference import Synthesizer
 from scipy.io.wavfile import write
 import tkinter as tk
 from tkinter import filedialog
 import traceback
 import platform
-import gdown
+from app.utils import *
 
-
-plt = platform.system()
-
-if plt == "Windows":
-    import winsound
-elif plt == "Linux" or plt == "Darwin":
-    from pydub import AudioSegment
-    from pydub.playback import play
-else:
-    print("Unidentified system")
-
-# init paths
-APP_FOLDER = Path(Path(__file__).parent.resolve())
-APP_CONFIG_PATH = Path(APP_FOLDER, "static_web/resource/", "app-config.json")
-SPEAKER_CONFIG = Path(
-    APP_FOLDER, "static_web/resource/json-mapping/", "speaker_map.json"
-)
-TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
-TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_630000.pth")
 
 try:
-    from vits.inference import Synthesizer
+    from vits.synthesizer import Synthesizer
 
-    synthesizer = Synthesizer()
-    synthesizer.load_config(TTS_CONFIG_PATH)
+    synthesizer = Synthesizer(TTS_CONFIG_PATH)
 
     if TTS_MODEL_PATH.exists():
         synthesizer.load_model(TTS_MODEL_PATH)
     else:
-        url = 'https://drive.google.com/uc?id=1XSc2Fl-VsSrduxthueIBvpENo4vZtzdE'
-        gdown.download(url, str(TTS_MODEL_PATH), quiet=False)
+        download_model("G_455000.pth")
         synthesizer.load_model(TTS_MODEL_PATH)
         
     synthesizer.init_speaker_map(SPEAKER_CONFIG)
@@ -49,19 +27,6 @@ try:
 except ImportError as err:
     print(err)
     eel.call_torch_modal()  # call javascript modal if torch not available
-
-
-def create_samples():
-    sentence = "So hört sich meine Stimme an."
-    for name, idx in synthesizer.speaker_map.items():
-        audio_data = synthesizer.synthesize(
-            str(sentence),
-            idx,
-            {"speech_speed": 1.0, "speech_var_a": 0.56, "speech_var_b": 0.7},
-        )
-        print(name)
-        tmp_file_path = Path("static_web", "resource", "audio-samples", idx + ".wav")
-        write(tmp_file_path, 22050, audio_data)
 
 
 def synthesize(text, speaker_id, speaker_name, params):
@@ -83,7 +48,7 @@ def synthesize(text, speaker_id, speaker_name, params):
         save_file_path = Path(params["out_path"], save_file_name)
         write(save_file_path, 22050, audio_data)
 
-    eel.addTableRow(speaker_name, text, str(Path("tmp",file_name)))
+    eel.addTableRow(params["speaker_name"], text, str(Path("tmp",file_name)))
 
 
 @eel.expose
@@ -103,9 +68,9 @@ def save_config(data):
 def play_sample(speaker_idx):
     file_path = Path("static_web", "resource", "audio-samples", speaker_idx + ".wav")
 
-    if plt == "Windows":
+    if PLATFORM == "Windows":
         winsound.PlaySound(str(file_path), winsound.SND_ASYNC)
-    elif plt == "Linux" or plt == "Darwin":
+    elif PLATFORM == "Linux" or PLATFORM == "Darwin":
         audio = AudioSegment.from_wav(str(file_path))
         play(audio)
 
@@ -114,9 +79,7 @@ def play_sample(speaker_idx):
 def process_input(params=None):
     try:
         if params["text"]:
-            audio = synthesize(
-                params["text"], params["speaker_id"], params["speaker_name"], params
-            )
+            synthesize(params["text"], params["speaker_id"], params["speaker_name"], params)
 
         if params["file_content"]:
             for line in params["file_content"]:
@@ -129,6 +92,7 @@ def process_input(params=None):
                         line, params["speaker_id"], params["speaker_name"], params
                     )
         eel.finishSynthesize()
+
     except Exception as err:
         print(err)
         traceback.print_tb(err.__traceback__)
@@ -159,7 +123,7 @@ def exit_clean_up():
 # start EEL App
 if __name__ == "__main__":
 
-    # create_samples()
+    #create_samples(synthesizer)
 
     directory = "static_web"
     app = "chrome"
@@ -178,7 +142,7 @@ if __name__ == "__main__":
             eel.start(page, mode=app, **eel_kwargs)
         except EnvironmentError:
             # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
-            if plt == "Windows" and int(platform.release()) >= 10:
+            if PLATFORM == "Windows" and int(platform.release()) >= 10:
                 eel.start(page, mode="edge", **eel_kwargs)
             else:
                 exit_clean_up()

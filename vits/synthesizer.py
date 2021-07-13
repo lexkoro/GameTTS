@@ -13,8 +13,8 @@ from vits.text import text_to_sequence
 
 
 class Synthesizer:
-    def __init__(self):
-        self.hps_config = None
+    def __init__(self, config_path):
+        self.hps_config = self.load_config(config_path)
         self.gen_model = None
         self.speaker_map = None
         self.segmenter = pysbd.Segmenter(language="de", clean=True)
@@ -45,7 +45,7 @@ class Synthesizer:
         return text_norm
 
     def load_config(self, conf_path):
-        self.hps_config = utils.get_hparams_from_file(conf_path)
+        return utils.get_hparams_from_file(conf_path)
 
     def load_model(self, model_path):
         self.gen_model = SynthesizerTrn(

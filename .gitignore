@@ -153,3 +153,4 @@ tts_output.wav
 deps.json
 speakers.json
 internal/*
+vits/model/*.pth
