@@ -19,7 +19,7 @@ try:
     if TTS_MODEL_PATH.exists():
         synthesizer.load_model(TTS_MODEL_PATH)
     else:
-        download_model("G_455000.pth")
+        download_model("G_700000.pth")
         synthesizer.load_model(TTS_MODEL_PATH)
         
     synthesizer.init_speaker_map(SPEAKER_CONFIG)

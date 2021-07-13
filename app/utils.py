@@ -18,7 +18,8 @@ MODEL_URLS = {
     "G_455000.pth": "https://drive.google.com/uc?id=1uOz-Lm7Etr97yL3AgS_Ju8UMSz-1t0H2",
     "G_550000.pth": "https://drive.google.com/uc?id=1AQu3PmEZ_h3DWLgfKeJRjNn_iW0-ISGu",
     "G_630000.pth": "https://drive.google.com/uc?id=1XSc2Fl-VsSrduxthueIBvpENo4vZtzdE",
-    "G_685000.pth": "https://drive.google.com/uc?id=1J6x6q1dcc5selGKJB4weOrrr9Px-uUza"
+    "G_685000.pth": "https://drive.google.com/uc?id=1J6x6q1dcc5selGKJB4weOrrr9Px-uUza",
+    "G_700000.pth": "https://drive.google.com/uc?id=1tq61uJ0raivrFPgaZ19Js-isqmCHxwHg"
 }
 
 # init platform
