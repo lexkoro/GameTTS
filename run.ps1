@@ -1,6 +1,15 @@
-# activate virtualenv
-.\.venv\Scripts\activate
+$prevPwd = $PWD; Set-Location -ErrorAction Stop -LiteralPath $PSScriptRoot
 
-python .\main.py
+try {
+    # activate virtualenv
+    .\.venv\Scripts\activate
 
-deactivate
+    # run program
+    python .\main.py
+
+    # deactivate virtualenv
+    deactivate
+}
+finally {
+    $prevPwd | Set-Location
+}

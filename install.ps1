@@ -1,10 +1,13 @@
-# redirect stderr into stdout
-$p = &{python -V} 2>&1
+$prevPwd = $PWD; Set-Location -ErrorAction Stop -LiteralPath $PSScriptRoot
 
-if ($p -match "Python"){
+try {
+  # redirect stderr into stdout
+  $p = & { python -V } 2>&1
+
+  if ($p -match "Python") {
     # upgrade pip to its latest version  
     python -m pip install --upgrade pip   
-  
+    
     # install virtualenv  
     python -m pip install virtualenv
 
@@ -19,6 +22,11 @@ if ($p -match "Python"){
 
     # deactivate virtualenv
     deactivate
-}else{
+  }
+  else {
     Write-Host "No Python installation found"
+  }
+}
+finally {
+  $prevPwd | Set-Location
 }
