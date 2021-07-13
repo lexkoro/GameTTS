@@ -19,3 +19,5 @@
 - Die Anwendung über git klonen `git clone https://github.com/lexkoro/GameTTS.git` oder als ZIP herunterladen und entpacken
 - Mit der Powershell Kommandozeile `PS C:\GameTTS> .\install.ps1` die notwendigen Abhängigkeiten installieren
 - Mit `PS C:\GameTTS> .\run.ps1` kann die Anwendung gestartet werden
+
+[ ! ] Der erste Start der Anwendung kann etwas Zeit in anspruch nehmen, da zunächst das TTS Modell heruntergeladen werden muss (ca. 466 MB).
