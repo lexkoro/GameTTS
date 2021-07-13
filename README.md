@@ -11,7 +11,6 @@
 - [eSpeak](https://sourceforge.net/projects/espeak/files/espeak/espeak-1.48/setup_espeak-1.48.04.exe/download) herunterladen und installieren
 - Pfad zur **espeak.exe** der **Path-Umgebungsvariable** hinzufügen [Anleitung](https://michster.de/wie-setze-ich-die-path-umgebungsvariablen-unter-windows-10/)
 - Der Standard Pfad sollte `C:\Program Files (x86)\eSpeak\command_line` sein [Beispiel](https://user-images.githubusercontent.com/6319070/125455610-8d303da3-0b4d-474c-98c6-3e93241f920c.png)
-
 - Über die Kommandozeile eSpeak testen `C:\> espeak -v de "Das ist nur ein Test."`
 - Ist die Sprachausgabe zu hören war die Installation erfolgreich.
 
