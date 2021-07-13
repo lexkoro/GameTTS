@@ -288,12 +288,12 @@
     <script>
 
         // ENABLE FOR PRODUCTION
-        // window.oncontextmenu = function (event) {
-        //     // block right-click / context-menu
-        //     event.preventDefault();
-        //     event.stopPropagation();
-        //     return false;
-        // };
+        window.oncontextmenu = function (event) {
+            // block right-click / context-menu
+            event.preventDefault();
+            event.stopPropagation();
+            return false;
+        };
 
 
         $(document).ready(function () {
