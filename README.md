@@ -20,4 +20,8 @@
 - Mit der Powershell Kommandozeile `PS C:\GameTTS> .\install.ps1` die notwendigen Abhängigkeiten installieren
 - Mit `PS C:\GameTTS> .\run.ps1` kann die Anwendung gestartet werden
 
+
 ***Der erste Start der Anwendung kann etwas Zeit in Anspruch nehmen, da zunächst das TTS Modell heruntergeladen werden muss (ca. 466 MB).***
+
+
+![2021-07-13 20_58_34-Text-To-Speech GUI](https://user-images.githubusercontent.com/6319070/125511688-8c2aed42-d8ac-4826-bf57-fb2bfe27f0fb.png)
