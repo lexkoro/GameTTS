@@ -25,3 +25,9 @@
 
 
 ![2021-07-13 20_58_34-Text-To-Speech GUI](https://user-images.githubusercontent.com/6319070/125511688-8c2aed42-d8ac-4826-bf57-fb2bfe27f0fb.png)
+
+
+## Verweise
+
+- TTS Repository: https://github.com/jaywalnut310/vits
+- https://github.com/mdbootstrap
