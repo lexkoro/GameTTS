@@ -34,7 +34,7 @@ class Synthesizer:
 
     def get_speaker_by_id(self, speaker_id):
         for key, val in self.speaker_map.items():
-            if speaker_id == val:
+            if str(speaker_id) == val:
                 return key
 
     def get_text(self, text):

@@ -48,7 +48,7 @@ def synthesize(text, speaker_id, speaker_name, params):
         save_file_path = Path(params["out_path"], save_file_name)
         write(save_file_path, 22050, audio_data)
 
-    eel.addTableRow(params["speaker_name"], text, str(Path("tmp",file_name)))
+    eel.addTableRow(speaker_name, text, str(Path("tmp",file_name)))
 
 
 @eel.expose
