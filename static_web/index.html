@@ -253,7 +253,7 @@
                             <div class="col">
                                 <label for="speech_noiseb_slider" class="form-label">Varianz B:</label>
                                 <div class="form-outline mb-4">
-                                    Wert: <span id="speech_noiseb_value">0.7</span>
+                                    Wert: <span id="speech_noiseb_value">0.8</span>
 
                                     <div class="range">
                                         <input type="range" class="form-range" min="0" max="1" step="0.1"
@@ -320,7 +320,7 @@
 
             $("#speech_speed_slider").val(1);
             $("#speech_noisea_slider").val(0.56);
-            $("#speech_noiseb_slider").val(0.7);
+            $("#speech_noiseb_slider").val(0.8);
         });
 
         function putSpeakerDropDown(game_id = 0) {
@@ -348,7 +348,7 @@
             $('#speech_noisea_value').html($("#speech_noisea_slider").val());
 
             // reset speech varianz B to default
-            $("#speech_noiseb_slider").val(0.7);
+            $("#speech_noiseb_slider").val(0.8);
             $('#speech_noiseb_value').html($("#speech_noiseb_slider").val());
         });
 
