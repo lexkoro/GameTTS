@@ -5,29 +5,34 @@
 
 ### Windows
 #### Python
-- [Python3](https://www.python.org/downloads/) installieren (getestet mit Python 3.9)
+- Install [Python3](https://www.python.org/downloads/) (tested with Python 3.9)
 
 #### eSpeak
-- [eSpeak](https://sourceforge.net/projects/espeak/files/espeak/espeak-1.48/setup_espeak-1.48.04.exe/download) herunterladen und installieren
-- Pfad zur **espeak.exe** der **Path-Umgebungsvariable** hinzufügen [Anleitung](https://michster.de/wie-setze-ich-die-path-umgebungsvariablen-unter-windows-10/)
-- Der Standard Pfad sollte `C:\Program Files (x86)\eSpeak\command_line` sein [Beispiel](https://user-images.githubusercontent.com/6319070/125455610-8d303da3-0b4d-474c-98c6-3e93241f920c.png)
-- Über die Kommandozeile eSpeak testen `C:\> espeak -v de "Das ist nur ein Test."`
-- Ist die Sprachausgabe zu hören war die Installation erfolgreich
+- download and install [eSpeak](https://sourceforge.net/projects/espeak/files/espeak/espeak-1.48/setup_espeak-1.48.04.exe/download)
+- Add **espeak.exe** to **PATH- system variable** [Instruction](https://java.com/en/download/help/path.html)
+- Default path should be `C:\Program Files (x86)\eSpeak\command_line` [Example](https://user-images.githubusercontent.com/6319070/125455610-8d303da3-0b4d-474c-98c6-3e93241f920c.png)
+- Test eSpeak via the command line `C:\> espeak -v de "Das ist nur ein Test."`
+- If you hear the speech output the setup was successful
 
-#### Anwendung
+#### Application
   
-- Die Anwendung über git klonen `git clone https://github.com/lexkoro/GameTTS.git` oder als ZIP herunterladen und entpacken
-- Mit der Powershell Kommandozeile `PS C:\GameTTS> .\install.ps1` die notwendigen Abhängigkeiten installieren
-- Mit `PS C:\GameTTS> .\run.ps1` kann die Anwendung gestartet werden
+- Clone the application via git `git clone https://github.com/lexkoro/GameTTS.git` or download and extract it
+- Install the necessary dependencies using Powershell `PS C:\GameTTS> .\install.ps1`
+- The application can be run with `PS C:\GameTTS> .\run.ps1`
 
 
-***Der erste Start der Anwendung kann etwas Zeit in Anspruch nehmen, da zunächst das TTS Modell heruntergeladen werden muss (ca. 466 MB).***
+***The first start of the application may take a while since the TTS model has to be downloaded first (approx. 466 MB).***
 
 
 ![2021-07-13 20_58_34-Text-To-Speech GUI](https://user-images.githubusercontent.com/6319070/125511688-8c2aed42-d8ac-4826-bf57-fb2bfe27f0fb.png)
 
 
-## Verweise
+## References
 
 - TTS Repository: https://github.com/jaywalnut310/vits
 - https://github.com/mdbootstrap
+
+
+## License and Disclaimer
+
+The released models are made available for non-commercial use only, under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. You can find details at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
