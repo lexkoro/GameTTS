@@ -35,4 +35,4 @@
 
 ## License and Disclaimer
 
-The released models are made available for non-commercial use only, under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. You can find details at: https://creativecommons.org/licenses/by-nc/4.0/legalcode
+The released models are made available for non-commercial use only under the terms of the Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0) license. For details, see: https://creativecommons.org/licenses/by-nc/4.0/legalcode
