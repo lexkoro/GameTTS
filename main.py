@@ -3,7 +3,6 @@ import sys
 import json
 from datetime import datetime
 from pathlib import Path
-from scipy.io.wavfile import write
 import tkinter as tk
 from tkinter import filedialog
 import traceback
@@ -21,7 +20,7 @@ try:
     else:
         download_model("G_700000.pth")
         synthesizer.load_model(TTS_MODEL_PATH)
-        
+
     synthesizer.init_speaker_map(SPEAKER_CONFIG)
 
 except ImportError as err:
@@ -36,19 +35,20 @@ def synthesize(text, speaker_id, speaker_name, params):
 
     if not tmp_path.exists():
         tmp_path.mkdir()
-        
-    file_name = "_".join([str(speaker_id), speaker_name, str(cur_timestamp), "tmp_file.wav"])
-    tmp_file_path = Path(tmp_path, file_name)
-    write(tmp_file_path, 22050, audio_data)
+
+    file_name = "_".join(
+        [str(speaker_id), speaker_name, str(cur_timestamp), "tmp_file"]
+    )
+    save_audio(tmp_path, file_name, audio_data)
 
     if params["out_path"]:
-        save_file_name = "_".join(
-            [cur_timestamp, speaker_id, speaker_name, text[:15] + ".wav"]
+        save_file_name = "_".join([cur_timestamp, speaker_id, speaker_name, text[:15]])
+        save_file_path = Path(params["out_path"])
+        save_audio(
+            save_file_path, save_file_name, audio_data, params["file_export_ext"]
         )
-        save_file_path = Path(params["out_path"], save_file_name)
-        write(save_file_path, 22050, audio_data)
 
-    eel.addTableRow(speaker_name, text, str(Path("tmp",file_name)))
+    eel.addTableRow(speaker_name, text, str(Path("tmp", ".".join([file_name, "wav"]))))
 
 
 @eel.expose
@@ -79,7 +79,9 @@ def play_sample(speaker_idx):
 def process_input(params=None):
     try:
         if params["text"]:
-            synthesize(params["text"], params["speaker_id"], params["speaker_name"], params)
+            synthesize(
+                params["text"], params["speaker_id"], params["speaker_name"], params
+            )
 
         if params["file_content"]:
             for line in params["file_content"]:
@@ -114,7 +116,7 @@ def select_out_dir():
 
 @eel.expose
 def exit_clean_up():
-    tmp_files = Path("static_web", "tmp").glob("*.wav")
+    tmp_files = Path("static_web", "tmp").glob("*.*")
     for f in tmp_files:
         f.unlink()
     sys.exit(0)
@@ -123,7 +125,7 @@ def exit_clean_up():
 # start EEL App
 if __name__ == "__main__":
 
-    #create_samples(synthesizer)
+    # create_samples(synthesizer)
 
     directory = "static_web"
     app = "chrome"

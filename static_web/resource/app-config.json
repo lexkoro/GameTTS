@@ -1,4 +1,5 @@
 {
     "out_path": "",
-    "out_path_use": false
+    "out_path_use": false,
+    "file_ext_radio": "wavRadio"
 }

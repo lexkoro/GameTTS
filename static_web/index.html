@@ -163,6 +163,25 @@
                     </button>
                 </div>
 
+
+
+                <div class="mb-4">
+                    <label class="form-check-label" for="export_ext"> Export Audioformat:</label>
+                    <!-- Default radio -->
+                    <div class="form-check" id="export_ext">
+                        <input class="form-check-input" type="radio" name="flexExportExtRadio" value="wav" id="wavRadio"
+                            checked />
+                        <label class="form-check-label" for="flexExportExtRadio1"> .wav </label>
+                    </div>
+
+                    <!-- Default checked radio -->
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexExportExtRadio" value="ogg"
+                            id="oggRadio" />
+                        <label class="form-check-label" for="flexExportExtRadio2"> .ogg </label>
+                    </div>
+                </div>
+
                 <!-- Save Config Button -->
                 <button type="button" class="btn btn-primary btn-block" id="save_config_button">Speichern</button>
 
@@ -288,12 +307,12 @@
     <script>
 
         // ENABLE FOR PRODUCTION
-        window.oncontextmenu = function (event) {
-            // block right-click / context-menu
-            event.preventDefault();
-            event.stopPropagation();
-            return false;
-        };
+        // window.oncontextmenu = function (event) {
+        //     // block right-click / context-menu
+        //     event.preventDefault();
+        //     event.stopPropagation();
+        //     return false;
+        // };
 
 
         $(document).ready(function () {
@@ -424,6 +443,7 @@
             params.speech_speed = document.getElementById('speech_speed_slider').value;
             params.speech_var_a = document.getElementById('speech_noisea_slider').value;
             params.speech_var_b = document.getElementById('speech_noiseb_slider').value;
+            params.file_export_ext = $("input[type='radio'][name='flexExportExtRadio']:checked").val();
             params.text = null;
             params.file_content = null;
             params.out_path = null;
@@ -464,9 +484,10 @@
         }
 
         async function loadConfig() {
-            var data = await eel.load_config()();
-            $("#save_file_path").val(data.out_path);
-            $("#out_file_switch").prop("checked", data.out_path_use);
+            var settings = await eel.load_config()();
+            $("#save_file_path").val(settings.out_path);
+            $("#out_file_switch").prop("checked", settings.out_path_use);
+            $("#" + settings.file_ext_radio).prop("checked", true);
         };
 
         $("#save_config_button").click(async function () {
@@ -475,6 +496,7 @@
 
             settings.out_path = document.getElementById('save_file_path').value;
             settings.out_path_use = document.getElementById('out_file_switch').checked;
+            settings.file_ext_radio = $("input[type='radio'][name='flexExportExtRadio']:checked").attr('id');
             eel.save_config(settings)();
         });
 
