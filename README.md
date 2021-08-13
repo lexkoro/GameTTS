@@ -7,13 +7,6 @@
 #### Python
 - Install [Python3](https://www.python.org/downloads/) (tested with Python 3.9)
 
-#### eSpeak
-- download and install [eSpeak](https://sourceforge.net/projects/espeak/files/espeak/espeak-1.48/setup_espeak-1.48.04.exe/download)
-- Add **espeak.exe** to **PATH- system variable** [Instruction](https://java.com/en/download/help/path.html)
-- Default path should be `C:\Program Files (x86)\eSpeak\command_line` [Example](https://user-images.githubusercontent.com/6319070/125455610-8d303da3-0b4d-474c-98c6-3e93241f920c.png)
-- Test eSpeak via the command line `C:\> espeak -v de "Das ist nur ein Test."`
-- If you hear the speech output the setup was successful
-
 #### Application
   
 - Clone the application via git `git clone https://github.com/lexkoro/GameTTS.git` or download and extract it
