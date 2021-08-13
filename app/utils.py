@@ -12,15 +12,14 @@ SPEAKER_CONFIG = Path(
     APP_FOLDER, "static_web/resource/json-mapping/", "speaker_map.json"
 )
 TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
-TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_700000.pth")
+TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_800000.pth")
 
 
 MODEL_URLS = {
-    "G_455000.pth": "https://drive.google.com/uc?id=1uOz-Lm7Etr97yL3AgS_Ju8UMSz-1t0H2",
-    "G_550000.pth": "https://drive.google.com/uc?id=1AQu3PmEZ_h3DWLgfKeJRjNn_iW0-ISGu",
-    "G_630000.pth": "https://drive.google.com/uc?id=1XSc2Fl-VsSrduxthueIBvpENo4vZtzdE",
-    "G_685000.pth": "https://drive.google.com/uc?id=1J6x6q1dcc5selGKJB4weOrrr9Px-uUza",
-    "G_700000.pth": "https://drive.google.com/uc?id=1tq61uJ0raivrFPgaZ19Js-isqmCHxwHg",
+    "G_800000.pth": "https://drive.google.com/uc?id=1fTyyVcC76m4YhCSrlpG5dYnwNC_h1KFB",
+    "G_900000.pth": "https://drive.google.com/uc?id=1JPHEnM-aho0HRUneA8NBeVG-JnvkRB0s",
+
+    
 }
 
 # init platform
@@ -46,7 +45,7 @@ def create_samples(synthesizer):
         audio_data = synthesizer.synthesize(
             str(sentence),
             idx,
-            {"speech_speed": 1.0, "speech_var_a": 0.56, "speech_var_b": 0.7},
+            {"speech_speed": 1.1, "speech_var_a": 0.345, "speech_var_b": 0.5},
         )
         print(name)
         tmp_file_path = Path("static_web", "resource", "audio-samples", idx + ".wav")

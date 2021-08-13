@@ -5,6 +5,6 @@ gdown
 numpy
 scipy
 librosa
-unidecode
-phonemizer
 torch
+gruut
+gruut-lang-de
