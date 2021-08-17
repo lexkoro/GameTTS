@@ -14,7 +14,7 @@
 - The application can be run with `PS C:\GameTTS> .\run.ps1`
 
 
-***The first start of the application may take a while since the TTS model has to be downloaded first (approx. 466 MB).***
+***The first start of the application may take a while since the TTS model has to be downloaded first (approx. 155 MB).***
 
 
 ![2021-07-13 20_58_34-Text-To-Speech GUI](https://user-images.githubusercontent.com/6319070/125511688-8c2aed42-d8ac-4826-bf57-fb2bfe27f0fb.png)
