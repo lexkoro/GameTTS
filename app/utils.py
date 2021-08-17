@@ -12,14 +12,11 @@ SPEAKER_CONFIG = Path(
     APP_FOLDER, "static_web/resource/json-mapping/", "speaker_map.json"
 )
 TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
-TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_800000.pth")
-
+TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_600000.pth")
 
 MODEL_URLS = {
-    "G_800000.pth": "https://drive.google.com/uc?id=1fTyyVcC76m4YhCSrlpG5dYnwNC_h1KFB",
-    "G_900000.pth": "https://drive.google.com/uc?id=1JPHEnM-aho0HRUneA8NBeVG-JnvkRB0s",
-
-    
+    "G_600000.pth": "https://drive.google.com/uc?id=15mGvmGlM-YNmXuMc90axIIRzF1UY6vCf",
+    "G_800000.pth": "https://drive.google.com/uc?id=1QFMvBagHqxJ9el7fxGLF-WOhySl0eEAT",
 }
 
 # init platform
