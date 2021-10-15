@@ -5,18 +5,19 @@ try {
   $p = & { python -V } 2>&1
 
   if ($p -match "Python") {
-    # upgrade pip to its latest version  
-    python -m pip install --upgrade pip   
-    
+    Write-Host "Installing VirtualEnv..."
     # install virtualenv  
     python -m pip install virtualenv
 
+    Write-Host "Creating VirtualEnv..."
     # create virtualenv
-    python -m virtualenv .venv
+    virtualenv .venv
 
+    Write-Host "Activating VirtualEnv..."
     # activate virtualenv
     .\.venv\Scripts\activate
 
+    Write-Host "Installing Dependencies..."
     # install dependencies
     python -m pip install -r .\requirements.txt
 
