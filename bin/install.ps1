@@ -26,5 +26,9 @@ try {
     Write-Host "No Python installation found"
   }
 }
-catch [System.SystemException] { "An error occurred during the installation of dependencies." }
+catch [System.SystemException] { 
+  Write-Host "An error occurred during the installation of dependencies." 
+  Write-Host $Error
+  exit -1 
+}
 
