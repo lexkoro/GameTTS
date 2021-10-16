@@ -9,7 +9,6 @@ import traceback
 import platform
 from app.utils import *
 
-
 try:
     from vits.synthesizer import Synthesizer
 
@@ -135,14 +134,14 @@ if __name__ == "__main__":
         size=(1050, 750),
     )
 
-    #create_samples(synthesizer)
-    
+    # create_samples(synthesizer)
+
     eel.init(directory)
 
     try:
         try:
             eel.start(page, mode=app, **eel_kwargs)
-            
+
         except EnvironmentError:
             # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
             if PLATFORM == "Windows" and int(platform.release()) >= 10:
