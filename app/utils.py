@@ -1,9 +1,10 @@
-import gdown
+# import gdown
 import platform
 from pathlib import Path
 from scipy.io.wavfile import write
 from pydub import AudioSegment
 import numpy as np
+import requests
 
 # init paths
 APP_FOLDER = Path(Path(__name__).parent.resolve())
@@ -15,8 +16,7 @@ TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
 TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_600000.pth")
 
 MODEL_URLS = {
-    "G_600000.pth": "https://drive.google.com/uc?id=15mGvmGlM-YNmXuMc90axIIRzF1UY6vCf",
-    "G_800000.pth": "https://drive.google.com/uc?id=1QFMvBagHqxJ9el7fxGLF-WOhySl0eEAT",
+    "G_600000.pth": "https://github.com/lexkoro/GameTTS/releases/download/G_600000.pth",
 }
 
 # init platform
@@ -33,7 +33,8 @@ else:
 
 def download_model(model_name):
     url = MODEL_URLS[model_name]
-    gdown.download(url, str(TTS_MODEL_PATH), quiet=False)
+    r = requests.get(url, allow_redirects=True)
+    open(str(TTS_MODEL_PATH), "wb").write(r.content)
 
 
 def create_samples(synthesizer):
