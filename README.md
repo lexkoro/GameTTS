@@ -4,7 +4,7 @@
 ## Installation
 
 ### Python
-- Install [Python3](https://www.python.org/downloads/) (tested with Python 3.9)
+- Install [Python3](https://www.python.org/downloads/release/python-397/) (tested with Python 3.9) / Don't use Python 3.10
 - Check the option for python to be added to PATH variable
 
 ### Application
