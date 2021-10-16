@@ -16,7 +16,7 @@ TTS_CONFIG_PATH = Path(APP_FOLDER, "vits/model", "config.json")
 TTS_MODEL_PATH = Path(APP_FOLDER, "vits/model", "G_600000.pth")
 
 MODEL_URLS = {
-    "G_600000.pth": "https://github.com/lexkoro/GameTTS/releases/download/G_600000.pth",
+    "G_600000.pth": "https://github.com/lexkoro/GameTTS/releases/download/v0.0.1/G_600000.pth",
 }
 
 # init platform
