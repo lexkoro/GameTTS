@@ -13,44 +13,10 @@ hyperparameter. Some cleaners are English-specific. You'll typically want to use
 '''
 
 import re
-from unidecode import unidecode
-from phonemizer import phonemize
-
+import gruut
 
 # Regular expression matching whitespace:
 _whitespace_re = re.compile(r'\s+')
-
-# List of (regular expression, replacement) pairs for abbreviations:
-_abbreviations = [(re.compile('\\b%s\\.' % x[0], re.IGNORECASE), x[1]) for x in [
-  ('mrs', 'misess'),
-  ('mr', 'mister'),
-  ('dr', 'doctor'),
-  ('st', 'saint'),
-  ('co', 'company'),
-  ('jr', 'junior'),
-  ('maj', 'major'),
-  ('gen', 'general'),
-  ('drs', 'doctors'),
-  ('rev', 'reverend'),
-  ('lt', 'lieutenant'),
-  ('hon', 'honorable'),
-  ('sgt', 'sergeant'),
-  ('capt', 'captain'),
-  ('esq', 'esquire'),
-  ('ltd', 'limited'),
-  ('col', 'colonel'),
-  ('ft', 'fort'),
-]]
-
-
-def expand_abbreviations(text):
-  for regex, replacement in _abbreviations:
-    text = re.sub(regex, replacement, text)
-  return text
-
-
-def expand_numbers(text):
-  return normalize_numbers(text)
 
 
 def lowercase(text):
@@ -61,56 +27,38 @@ def collapse_whitespace(text):
   return re.sub(_whitespace_re, ' ', text)
 
 
-def convert_to_ascii(text):
-  return unidecode(text)
+def gruut_cleaner(text):
+    # Table for str.translate to fix gruut/TTS phoneme mismatch
+    GRUUT_TRANS_TABLE = str.maketrans("g", "ɡ")
+    phonemizer_args = {
+        "remove_stress": True,
+        "ipa_minor_breaks": False,  # don't replace commas/semi-colons with IPA |
+        "ipa_major_breaks": False,  # don't replace periods with IPA ‖
+    }
 
+    text = lowercase(text)
+    ph_list = gruut.text_to_phonemes(
+        text,
+        lang="de-de",
+        return_format="word_phonemes",
+        phonemizer_args=phonemizer_args,
+    )
 
-def basic_cleaners(text):
-  '''Basic pipeline that lowercases and collapses whitespace without transliteration.'''
-  text = lowercase(text)
-  text = collapse_whitespace(text)
-  return text
+    # Join and re-split to break apart dipthongs, suprasegmentals, etc.
+    ph_list = ["".join(word_phonemes) for word_phonemes in ph_list]
 
+    clean_text = " ".join(ph_list)
 
-def transliteration_cleaners(text):
-  '''Pipeline for non-English text that transliterates to ASCII.'''
-  text = convert_to_ascii(text)
-  text = lowercase(text)
-  text = collapse_whitespace(text)
-  return text
+    # Fix a few phonemes
+    clean_text = (
+        clean_text.translate(GRUUT_TRANS_TABLE)
+        .replace(" .", ".")
+        .replace(" ?", "?")
+        .replace(" !", "!")
+        .replace(" ,", ",")
+        .replace(" :", ":")
+        .replace(" ;", ";")
+    )
+    clean_text = collapse_whitespace(clean_text)
 
-
-def english_cleaners(text):
-  '''Pipeline for English text, including abbreviation expansion.'''
-  text = convert_to_ascii(text)
-  text = lowercase(text)
-  text = expand_abbreviations(text)
-  phonemes = phonemize(text, language='en-us', backend='espeak', strip=True)
-  phonemes = collapse_whitespace(phonemes)
-  return phonemes
-
-
-def english_cleaners2(text):
-  '''Pipeline for English text, including abbreviation expansion. + punctuation + stress'''
-  text = convert_to_ascii(text)
-  text = lowercase(text)
-  text = expand_abbreviations(text)
-  phonemes = phonemize(text, language='en-us', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True)
-  phonemes = collapse_whitespace(phonemes)
-  return phonemes
-
-
-def german_cleaners(text):
-  '''Pipeline for German text, including abbreviation expansion. + punctuation + stress'''
-  text = lowercase(text)
-  phonemes = phonemize(text, language='de', backend='espeak', strip=True, preserve_punctuation=True, with_stress=True, language_switch="remove-flags")
-  phonemes = collapse_whitespace(phonemes)
-  return phonemes
-
-
-def german_cleaners_simple(text):
-  '''Pipeline for German text, including abbreviation expansion. + punctuation + stress'''
-  text = lowercase(text)
-  phonemes = phonemize(text, language='de', backend='espeak', strip=True, preserve_punctuation=True, language_switch="remove-flags")
-  phonemes = collapse_whitespace(phonemes)
-  return phonemes
+    return clean_text

@@ -6,7 +6,7 @@ Defines the set of symbols used in text input to the model.
 _pad = "_"
 _punctuation = ';:,.!?¡¿—…"«»“” '
 _letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZÜÖÄabcdefghijklmnopqrstuvwxyzüöäß"
-_letters_ipa = "iyɨʉɯuɪʏʊeøɘəɵɤoɛœɜɞʌɔæɐaɶɑɒᵻʘɓǀɗǃʄǂɠǁʛpbtdʈɖcɟkɡqɢʔɴŋɲɳnɱmʙrʀⱱɾɽɸβfvθðszʃʒʂʐçʝxɣχʁħʕhɦɬɮʋɹɻjɰlɭʎʟˈˌːˑʍwɥʜʢʡɕʑɺɧʲɚ˞ɫ̩̃"
+_letters_ipa = "ɰqɲɸˈʲǀʊxʡmlɹˑhœʍɪɽæɤʀɡiǁɬ˞ħefʢɕǂøɻɢɵɠʂ͡yʔːbɛjʜɚɘʌdɨrɭɗɒɦχɔɾuʕɫɖð̯ɜɧɯpɳɐʐvaɥɑʘɞʉɓzɣãⱱʋtʎnβɺ̩ʃkʑᵻʁǃɮɱəõɟoʛˌʈŋ̃csʙɴθʟʄʝwçɶʏʒ"
 
 # Export all symbols:
 symbols = [_pad] + list(_punctuation) + list(_letters) + list(_letters_ipa)

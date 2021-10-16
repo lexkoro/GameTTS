@@ -55,13 +55,13 @@ class Synthesizer:
             n_speakers=self.hps_config.data.n_speakers,
             **self.hps_config.model
         )
-
         # move model to cuda
         if self.use_cuda:
             self.gen_model.cuda()
             
         _ = self.gen_model.eval()
-        _ = utils.load_checkpoint(model_path, self.gen_model, None)
+        _ = utils.load_checkpoint(model_path, self.gen_model)
+
 
     def synthesize(self, text, speaker_id=0, speech_param=None):
         wavs = []

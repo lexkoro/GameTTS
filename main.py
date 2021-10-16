@@ -9,7 +9,6 @@ import traceback
 import platform
 from app.utils import *
 
-
 try:
     from vits.synthesizer import Synthesizer
 
@@ -18,7 +17,7 @@ try:
     if TTS_MODEL_PATH.exists():
         synthesizer.load_model(TTS_MODEL_PATH)
     else:
-        download_model("G_700000.pth")
+        download_model("G_600000.pth")
         synthesizer.load_model(TTS_MODEL_PATH)
 
     synthesizer.init_speaker_map(SPEAKER_CONFIG)
@@ -125,8 +124,6 @@ def exit_clean_up():
 # start EEL App
 if __name__ == "__main__":
 
-    # create_samples(synthesizer)
-
     directory = "static_web"
     app = "chrome"
     page = "index.html"
@@ -137,11 +134,14 @@ if __name__ == "__main__":
         size=(1050, 750),
     )
 
+    # create_samples(synthesizer)
+
     eel.init(directory)
 
     try:
         try:
             eel.start(page, mode=app, **eel_kwargs)
+
         except EnvironmentError:
             # If Chrome isn't found, fallback to Microsoft Edge on Win10 or greater
             if PLATFORM == "Windows" and int(platform.release()) >= 10:

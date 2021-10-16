@@ -245,7 +245,7 @@
                             <label for="speech_speed_slider" class="form-label">Sprechgeschwindigkeit:</label>
 
                             <div class="form-outline mb-4">
-                                Wert: <span id="speedSliderValue">1</span>
+                                Wert: <span id="speedSliderValue">1.1</span>
 
                                 <div class="range">
                                     <input type="range" class="form-range" min="0" max="2" step="0.1"
@@ -260,7 +260,7 @@
                                 <label for="speech_noisea_slider" class="form-label">Varianz A:</label>
 
                                 <div class="form-outline mb-4">
-                                    Wert: <span id="speech_noisea_value">0.56</span>
+                                    Wert: <span id="speech_noisea_value">0.345</span>
                                     <div class="range">
                                         <input type="range" class="form-range" min="0" max="1" step="0.01"
                                             id="speech_noisea_slider" />
@@ -272,7 +272,7 @@
                             <div class="col">
                                 <label for="speech_noiseb_slider" class="form-label">Varianz B:</label>
                                 <div class="form-outline mb-4">
-                                    Wert: <span id="speech_noiseb_value">0.8</span>
+                                    Wert: <span id="speech_noiseb_value">0.5</span>
 
                                     <div class="range">
                                         <input type="range" class="form-range" min="0" max="1" step="0.1"
@@ -337,9 +337,9 @@
 
             loadConfig();
 
-            $("#speech_speed_slider").val(1);
-            $("#speech_noisea_slider").val(0.56);
-            $("#speech_noiseb_slider").val(0.8);
+            $("#speech_speed_slider").val(1.1);
+            $("#speech_noisea_slider").val(0.345);
+            $("#speech_noiseb_slider").val(0.5);
         });
 
         function putSpeakerDropDown(game_id = 0) {
@@ -359,15 +359,15 @@
 
         $("#resetSpeechSettings").click(function () {
             // reset speech speed to default
-            $("#speech_speed_slider").val(1);
+            $("#speech_speed_slider").val(1.1);
             $('#speedSliderValue').html($("#speech_speed_slider").val());
 
             // reset speech varianz A to default
-            $("#speech_noisea_slider").val(0.56);
+            $("#speech_noisea_slider").val(0.345);
             $('#speech_noisea_value').html($("#speech_noisea_slider").val());
 
             // reset speech varianz B to default
-            $("#speech_noiseb_slider").val(0.8);
+            $("#speech_noiseb_slider").val(0.5);
             $('#speech_noiseb_value').html($("#speech_noiseb_slider").val());
         });
 
