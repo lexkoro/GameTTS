@@ -1,4 +1,4 @@
-$prevPwd = $PWD; Set-Location -ErrorAction Stop -LiteralPath $PSScriptRoot
+#$prevPwd = $PWD; Set-Location -ErrorAction Stop -LiteralPath $PSScriptRoot
 
 try {
     # activate virtualenv
@@ -10,6 +10,5 @@ try {
     # deactivate virtualenv
     deactivate
 }
-finally {
-    $prevPwd | Set-Location
-}
+catch [System.SystemException] { "An error occurred." }
+

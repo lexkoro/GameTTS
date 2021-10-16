@@ -1,5 +1,3 @@
-$prevPwd = $PWD; Set-Location -ErrorAction Stop -LiteralPath $PSScriptRoot
-
 try {
   # redirect stderr into stdout
   $p = & { python -V } 2>&1
@@ -28,6 +26,5 @@ try {
     Write-Host "No Python installation found"
   }
 }
-finally {
-  $prevPwd | Set-Location
-}
+catch [System.SystemException] { "An error occurred during the installation of dependencies." }
+
