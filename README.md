@@ -3,16 +3,16 @@
 
 ## Installation
 
-### Windows
-#### Python
+### Python
 - Install [Python3](https://www.python.org/downloads/) (tested with Python 3.9)
+- Check the option for python to be added to PATH variable
 
-#### Application
+### Application
   
-- Clone the application via git `git clone https://github.com/lexkoro/GameTTS.git` or download and extract it
-- Install the necessary dependencies using Powershell `PS C:\GameTTS> .\install.ps1`
-- The application can be run with `PS C:\GameTTS> .\run.ps1`
+- Download the ZIP folder from [releases](https://github.com/lexkoro/GameTTS/releases/tag/v0.0.1) and extract it
+- Run the GameTTS.exe, it should install the required python dependencies and download the required TTS model
 
+If successful, the application should start automatically.
 
 ***The first start of the application may take a while since the TTS model has to be downloaded first (approx. 155 MB).***
 
