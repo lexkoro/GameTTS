@@ -1,0 +1,11 @@
+eel==0.14.0
+pysbd==0.3.4
+pydub==0.25.1
+numpy==1.21.1
+scipy==1.7.0
+librosa==0.8.1
+torch==1.9.0
+gruut==1.3.1
+gruut-lang-de==1.3.1
+gruut-ipa==0.10.0
+requests

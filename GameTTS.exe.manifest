@@ -1,0 +1,1614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="GameTTS.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="message.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="GameTTS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="GameTTS.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC-Manifestoptionen
+          Wenn Sie die Zugangsebene für das Windows-Benutzerkonto ändern möchten, ersetzen Sie den 
+          requestedExecutionLevel-Knoten durch eines der folgenden Elemente.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Löschen Sie den requestedExecutionLevel-Knoten, wenn Sie 
+         zum Gewährleisten der Abwärtskompatibilität die Datei- und Registrierungsvirtualisierung verwenden möchten.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameTTS.exe" size="25560">
+      <assemblyIdentity name="GameTTS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>UR/Vvh6cVIfZhHik75E/33SOHU4iiyR1g3ILlM/3qCU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="GameTTS.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\.gitignore" size="1854">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aj0MVkOBsQUaZJYs03kqdLMoJfSAGMhgTGkqGObQ1Os=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\app\utils.py" size="2150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oRKcjoCAiAAgEgMm6EfqiKu/5+Rknu4NqzJUjrZnvuI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\main.py" size="4051">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WSLdLmKK7pTRpfMLaYPjTrRh3t+gmqo3aWlDQos/+no=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\all.css" size="73625">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5a0xpHkTzfwkcKzU4wSYL64rzPYgmIVf7PO4TB5/6jQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\fontawesome.css" size="71990">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bIpDwGRWgwbsK1aDr/KE62U7bst6mg3MEPcafHkSCeg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\font-awesome.css" size="59345">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QtBLREol4veKpzj51zn/dhm7+d2wzszzFMf989mGYc4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\font-google.css" size="9143">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LKLoGHt5w/MvpKeJ5UZAG/mHFFIeejIGPqIExr+UWe8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\mdb.dark.min.css" size="314956">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>C/H3BWwNxlw2rFuc0iSASgtUfKdjprE91j/fMYSa2m0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\mdb.dark.rtl.min.css" size="314846">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QadJ5fhUL4dXL7dlKGjmeTZZCQTIJ2j/Hmk+pkUPgLg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\mdb.min.css" size="303803">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u3KABt0qeZJamU0juQdrtO91qYBBPqv7nnOo0qubc3Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\css\mdb.rtl.min.css" size="303330">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/TjXm3gmZNLFpNsuhKiifZzFNV8H2lhFajswoIIRjXk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\img\mdb-favicon.ico" size="1150">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r4lvpC+KaCiLPi9y0XCRsjY79gzgPUDqQ78TvQblEeU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\img\message.ico" size="16958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dH/iqTvlDAA1K55QUd5dfZh3cggCcpPyfklO+Xr0ug8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\index.html" size="22184">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+rJNcD1vpjoB1t40FEIfRn7qsHqeYnoilVKsdfOHfck=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\js\jquery-3.6.0.min.js" size="107748">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>h4eW+svL6t7d2nnBQXW7OWdRm2HR20auSaNrXchOXdk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\js\mdb.min.js" size="238102">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>e5KpzGKLhgAZFxoTmflamismzije3Lom6ZcRJjLJl64=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\0.wav" size="102458">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OPvH9r9n10gaZt77Iyrsci3YmVn1rLIUNeXdGcpMY6Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\1.wav" size="121914">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>bU6pC9V5tYMOcqLmhXbFLqkfF4Tf8jFj+iXwrvFadts=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\10.wav" size="117818">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oHSppSCgBV76utH+6xtjA/DNmxzFvj8XVbpod4w6rIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\100.wav" size="99386">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4gZuhUru9Zl3HRQmcXrbQj/9PCrHnh1lAiFghBDMeKA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\101.wav" size="141370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>K4oVKJwEtVYvhywOUWygDIHfRitNYkUTiMggM0Cuebs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\102.wav" size="129082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZgbEq9AY8kMY3L2ogUgITp+QvHMiNjtjaggg6tdxQZg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\103.wav" size="145466">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zgEllJlhrqOrfy9MsiOzjt46skSswEAhkV5dLZCm1ik=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\104.wav" size="143418">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>r7/k+gsOL3XYwWZvoPBDl5CCa+NtbyWgJc5DIa160GU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\105.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/g1eCr84QLt6GfuEN6ayvejmG89tNG/masNndasqOvU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\106.wav" size="106554">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>4RH6e/K+Sp/XDZkqfrfUvQ3VbNV4qfaSktVW6kacfl0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\107.wav" size="111674">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dAcjgdxQNbrjoOSfSKcRjZP3N4hjkTyX0YOYNBUtB10=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\108.wav" size="141370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8Bw/jfYAHYciaBakasKApbTx9N/ETj8lHAgVvYUud2Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\109.wav" size="115770">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vvxVRXI8l5TNHDnWHWcqeQhM43PI+X2mw0ihtDCy1Ps=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\11.wav" size="138298">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+75jy2gV1nVAVhCZrTRY5T4wYM6Qm9mw1BrImtfbQew=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\110.wav" size="127034">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>O4aNXdIAKoj1UskUq1qGlcgiVrUAojqE8h2yK1TGFf8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\111.wav" size="140346">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WiGtY3YoGiS6Qf+HvWnnNbYwb6dKl3VYQQd8ofijq7Y=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\112.wav" size="99386">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rplrKKS0qlgvZAs8Vc8ZjbLu9O02YGfHgTu0kc4ism8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\113.wav" size="112698">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QnZbmpd7ByedWNhpCChzzlV2TfeZyQ4u2lqckz6barA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\114.wav" size="131130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1L/sppmmS3BrAQJGBYGOLYQ756QlEgu5oySMpa50nIo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\115.wav" size="162874">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tX3hCc1fA8y0bDauo5sti9+e18UG3SRtiiYBe+x0SuA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\116.wav" size="123962">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UciLUHGQauMN6Q+OJynUmFNEaiX5T1Nh6SQmmQCr+QQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\117.wav" size="158778">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HqElZY9zSnmW8HvwIfZFZiPcrZPXbQ0ROn06gIfToBs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\118.wav" size="114746">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QtpI2X4JhqAKZCOwzyS5mObGoHrt9p/EyvEfRC7D9Vk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\119.wav" size="112698">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>611Y7rCuLIB3FfP7J6rfh4pVDUA4Ke9voIflO0X6Nug=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\12.wav" size="130106">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>d4Ssvxh9j4LVXMpYqDQc7PmB/UQNuO7rnLChgTTHuTA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\120.wav" size="112698">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Il29bk/5Zn+3LTN1IAHP57FybUsVgUVicw9Fp3mrhlw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\121.wav" size="115770">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8oLxjLgxtOMAFAMpqcBjMSA8Yj8s5dUvTh8bu6DcPa8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\122.wav" size="151610">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U9Jbr2uqeL7kj3RnY7SqIhZQB3ByOUgoAnQAstyU8IY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\123.wav" size="129082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>g8nGY0ZVYVCVRp+VRbdp8aZG7Que6LXTu19sL3cT6+w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\124.wav" size="121914">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Hbe9Nv0mKf8VWyrkdlQdyJVqwTiWBdTtn9LYseCC6F4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\125.wav" size="157754">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>gvbAi/+YszMg4vgyaJOBKGVy17lDh6OAeSUr/rocdLI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\126.wav" size="130106">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NHXJqRGoKuqBbGayIvq12pq72ekc8S7Yo9vjlhiT8vg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\127.wav" size="120890">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>pHgZ5UreM1vs8KtIlvZXO9v+nchUEoBixeuxjzQzVOo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\128.wav" size="148538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UNOXMOe7H8RKd5DbIhltYbNW1GcE47PWk7sF+WBVk8c=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\129.wav" size="126010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8cEGjeFV2L1e8DCcXGS7U4EJ1C2iKiM8v0Ufk6gPgg4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\13.wav" size="117818">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>W4nRmCE4p7wS6oJOfBgGE52pVTU/z9zgi0rr0P4qK10=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\130.wav" size="143418">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QrNZsvakhtsRUclaE4kdu0rBBycwZzCW+XB6Zz54z9M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\131.wav" size="137274">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>njtMlluYwQUEVEZhJGgE73N8yLWIz4N/SwsdkhMzElk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\132.wav" size="142394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>attk0es0Pzlf+DZqlgq73JIUwft0e2TEfgiNVfFh/tE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\14.wav" size="119866">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DQd/yOseJqDVRELlqWC0FdM/DcFdS5IJyjp9WOwDJ2M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\15.wav" size="136250">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dOrcrN9mhcFDM13er4jRXn0ZKuVgGHLHImxCZxgP74M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\16.wav" size="135226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>jg2kXDN6aKGZG2v/I/0Bxk8rWpeI6NBG6VxTK530/2E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\17.wav" size="124986">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/7R2r7CRoCZryZhi+QJnViGwZqYnGXKWh1PD/oPXf1U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\18.wav" size="129082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RylfjU0Io2xjkT2UIWE9nWJzRXE54AjHa04rfJsPnto=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\19.wav" size="166970">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>U9BpCBez7EMzRFEKbF3su+mpw7kXRbEbqzGMAd8znZs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\2.wav" size="129082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>t32pcB+ujZyVWjhzAUi5mUrVEhKBEU/nLlMEqUSxV/0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\20.wav" size="163898">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Hoh38nZOY8aXXr7JroBgJAfB0h5G3XbjEomXG4ec22Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\21.wav" size="191546">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>EvuG3/GAkHinmpz08EVHGbNbSqMDp+l3I34turoVmPk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\22.wav" size="115770">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VQt6MY9pUMfAtGz57Em64WBfvjz06vG92NL/Zutr9o0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\23.wav" size="123962">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z4RcdjGpfQVuoBAc14y93cUo8YC+onUc4XAT8LQvoXI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\24.wav" size="144442">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>5s2+IwQ45d7vmTnVe80rHwN9sSEEifmw2pzoqSr7BAs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\25.wav" size="111674">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JVrHJiA9TyptIxvpwZlBHU2WnuB7KdEZiivQ5118Uec=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\26.wav" size="122938">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JGd1eoNMCdoB1X0w+QMtYTw3tTv+8pTc8sLVkV1dZ/E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\27.wav" size="145466">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QKzGH6hcvPOgpI8VCT7Dr7pcaY6C0LmwmOFRVp80mgM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\28.wav" size="104506">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>GEO+O/I/0iW6AgU9vTKbA8Cp2NP0cLxRE7u/2Eh67vk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\29.wav" size="118842">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7m9BaQcLKKO8eeU2TwS+JMBIhyw5RVgPotxTgovuEM0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\3.wav" size="121914">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/v7bgbfXcJlF84L5fl2G62iLb0/VSbnAZKiEtj7z0Mg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\30.wav" size="157754">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qXHeV2lQy4NrxyFIeZaM5mooyIdI/g0VDDMx1vMT5d0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\31.wav" size="99386">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BGFkequCNAJk1rRbQEGSXJ6dS8sFKVsWlo8JnIKic0I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\32.wav" size="141370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Wmh1bdA+ztCweHU4b0vwoskeTg8cMUJq9EitzgEjCpE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\33.wav" size="152634">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sK4VTrN1lsGUMpyiYNsTZRAy12vmEp49mzWCVkwhSwA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\34.wav" size="109626">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/QmY+fh1dULh430bjDWKz2OhmzveC4wpn5XPo0AV6kE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\35.wav" size="144442">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>UpTsixbEn1fj24CcNo4TaGaC0iPSO5znsqxkO+Su6Zw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\36.wav" size="173114">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>x1OuSfLDws4WWCz+eqtad93GqR2ya9Km4dt5NPD4+ew=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\37.wav" size="120890">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>x4rHkgIxHbVybWOeaQEdX8xxvyl/O6IEvhM0KGxwwGM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\38.wav" size="141370">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>8KlCEOF6j+diKDbRqJLpy8KkyhIV8JchzG+HeWjRMWg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\39.wav" size="170042">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AeHd4fkKr02rEKyMbElfsikvNY1M+dD0SjtR+hpYBFU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\4.wav" size="102458">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sgKDq3fHtX1nqZykcieM+dJpDlUvO2q6TISYzx8iN0U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\40.wav" size="153658">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>rlV0p4XkMoPL0c8ouewKMeUXfxA+AT+9DoX0qYAD6Ws=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\41.wav" size="127034">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>InD3flAlwDEtf/hCKnPWvAW93onImG+zCUzCzm5EyoA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\42.wav" size="121914">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>DOs9Z8AzvlMKkbeR+ad1Y1L62p+SgnSpf/4BN/CdYCs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\43.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>sOdZdFYbiNXeTBasNrKCLue15gbLIXpRCIYDuKN87YM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\44.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vO2TH4tCB5GXHMuzFhi7SoaJcFnHvdvG0cdkuHHA26I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\45.wav" size="171066">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>QbHeRqyT0vMNZ1I5+edYVF/u+xrFpvcyBB1YkTFcJHM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\46.wav" size="167994">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zJSMjvsiUuykW6EYEtK40cH1JApOMlP0aOfYg/NuYBw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\47.wav" size="112698">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WKSACDj652A0TXWovgSgIRJ2TRJ2OuZReDoqTZFXvw8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\48.wav" size="136250">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ML+he7ebnMbNeK+wx/EhEq3Ugbh+5wgB4zehSPcb8QQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\49.wav" size="126010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>7/z2RKru2xw1cxtmaeI3ybryr4zf+ZgHZRZ5gT2rzHk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\5.wav" size="116794">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1MBRGI3Kz9i+r48n8paaDRRCje0HQL770CNcMQvosOc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\50.wav" size="159802">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Es4lQdiCRC8DXwE17IVSoP9IeMWRvSVSSM83LxDOL+M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\51.wav" size="128058">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3x9nEtvBD6gCwB3apF1Qpp5XHhZAbmr3h4OdgEdEdaU=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\52.wav" size="115770">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aaUJiWBxT28CTueHiAfRvhgbrNPFT5WRFlXlcRQ020I=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\53.wav" size="135226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Tc81XKTFR4v04WKaQlfMf+GeUwWYAoHk0HGyoTPoqZA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\54.wav" size="137274">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qG+OERmYyRuUXZ6+Pl2JU8r1hcLVaPz+m0gKlaNHvl4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\55.wav" size="194618">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nOrRucnqh5FugZAOK9rMq4uD7rDKwAUMfvhLv7gsib0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\56.wav" size="149562">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vgJy0KPrzBTSYcf4P/wbVxeRRsFgxWbPG6b1FyQbcO4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\57.wav" size="123962">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cCXWRwLzqJBrOXPN4lZ4oktd0ggQJc0quv880hCg8uo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\58.wav" size="117818">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>p5UxaoVGwAIsl/CE8o/Sq6M0fqxW7V+ggmeFoPfmJJ0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\59.wav" size="145466">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OLgcvr35VLk/YjFE4t4MZD5bd1Cj5c1XbYXXPu81M7A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\6.wav" size="135226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>prEVOq221UdnoJnDDfTPkNYlXsZ/lXVgFfow4f92xe4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\60.wav" size="133178">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>82EZlVr1zYQLVNBgyQt7plgVEh2KS0vCoLCBe2DdDI4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\61.wav" size="103482">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>hNx11PfXJ9lm+VASESdyb71WqZeubFGfw9Y4RrneNuQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\62.wav" size="169018">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>E0Ez88dzn7QQVKni+BQv0XKgNwx5GOXi0ec0W2os6f0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\63.wav" size="95290">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Je+gtAus6WX3z8Fd6GeHSBeHF7xTO90DRE5VQPhOuNs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\64.wav" size="142394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>3WfS6BqIet67foct0YuFXK2D7mI/f2iN67l5jK7qK3Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\65.wav" size="169018">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oEVUXdydqvH64zJhaAVvuvoGR6h/f0AbwDcizWlFY+U=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\66.wav" size="143418">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>NgV3QU/VMymdiYagBIg4xX+PPD3XZppuo3Ll4N2zi0A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\67.wav" size="135226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OVNkFm5JmZhhIwS/+Z3YmURzSaPf179bbLw7lvXW1g4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\68.wav" size="143418">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sx4xO+7WISzj+e/W7aZMeAzPTzAvRFrNCyCJoK2Mw4g=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\69.wav" size="130106">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Bt/lUmSreI7cG+NNp/c5ENanRtP2NfwYaCPdwQo/4h8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\7.wav" size="147514">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Uo5GVumFEFSIW24eRHxCZ0gUF6jKEj/bWVKoozDQezI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\70.wav" size="129082">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AL6CGPaR5e7tXUOzBb9wZK/YfGSI7DQ40ZxrhuKYBfE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\71.wav" size="142394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Bm0620XXhHNX01NEBAe8vyqaERm3gNjgOCta7KpnWDM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\72.wav" size="103482">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>eb47W3mMdOL/0smtt8EDcT33Jb3KLpcuZLhl1WOVQA8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\73.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RheV1yUgld0sGiAT2gAjg750eewRIEhARHASkuPXHFA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\74.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1qP3LT2ZrXcnwZmSOBKp7yZ8LbA1haUGyKu7/E0V4M8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\75.wav" size="119866">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TT+bryCpE1hd94lgQEG22Osdr/rFremooV6BFHSO0I4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\76.wav" size="130106">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+QEJFzCx3jfq/2iSdtqP3UxU+XsMxded0llI1qQqRcA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\77.wav" size="133178">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>k/XKzoCLBZXDphD2S6ZtZKT28ZQDKKV5tuLKQmz8PC0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\78.wav" size="135226">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>AzELoIfegA/lFI7xZ1zskTrj5sQz0eFtwWUgaMVkDDg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\79.wav" size="173114">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>i9sCtMyezD/aZaXnS7y3rs5kB+d5dVkJmG/RLTQ1VUw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\8.wav" size="117818">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>TqEz5vVIwNMj5gsmYj88dh//yGcW2GGauu4ddYt/6Wc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\80.wav" size="170042">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tvfFoWX9ZilDSU4rw/vY+5g5OjwIuu31BlD8ywN/nP0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\81.wav" size="142394">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>HbqF2WOjsacIzwLLGckY9badxhUjJqrdMYLthbDiRis=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\82.wav" size="156730">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>SE49Cp6jOemB5nQxtSKOn6Xx5FdERTszJ66uGgzvMd0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\83.wav" size="139322">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qA8Rb+aBpv3IU2LMSt3K1mIvakw9gSK9pAu7hz2pmTY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\84.wav" size="128058">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Yt2gtzpFWBi/I7hnnAJtc0L7iGFha/EeRCygIKCKjOg=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\85.wav" size="148538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WWYUJZObju7gjmNk4QEErhIIKNfMjJX+jiIXyjjb/sA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\86.wav" size="132154">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>W5A59C0EJ/Bkmnd4Hf79/LufeqsF5PHKh7o1dMhXs7E=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\87.wav" size="132154">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>aOpqTzWxHxFtPxL2YKbX40JhIDi8YhpQehApNLfHq6A=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\88.wav" size="126010">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>6FpVBi2H4iZK7YWcwdUym/bfWa93uTynpWaaGl3/1NE=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\89.wav" size="148538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>yYdgt+tRnx3lGZk2Xe6ZkSLVuet76T1xLaxeRj5FKSA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\9.wav" size="164922">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Cwxx0fIMuhslQNqGXXSjPgxNFLIfQ+XTweH8AudEmVw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\90.wav" size="111674">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RHrNEzbkuwyIlYS3AALmE+pkjY7uyDfEXnagey4YmY4=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\91.wav" size="113722">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>RGJ9nO1NenTekNly1cWafGyzZKOmDS2TIlP1hgylYbA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\92.wav" size="127034">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>WZzxb2W50IVUjmLKBKiQj5u5aPOTDkCXOHuAnrWBQtM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\93.wav" size="127034">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>2fPtA7WKpmR0SddNR7GMOht7LVb369jkLUd6wf4u/LQ=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\94.wav" size="144442">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>qA5ZYnqdZ+uQzyvtFGxPHyQYCUJmxfuYByn7z/sQTQk=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\95.wav" size="131130">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>npxq+SeKZIOo72yg+qYK8mtFmKXmKocs9ZHuxFbU5H8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\96.wav" size="150586">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OJ1pszuUvNH3nvGJIpzLWfVgG76S4H5Hdg4bK2uukVw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\97.wav" size="134202">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>w1Y5BUtOuDyX7YSpoWGgvC2xqyzGX2YsIh47zWLWNPM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\98.wav" size="109626">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>VqFpf2wq+JIujkdBBI9MauP7cb25RTK2/BqUKRmmJwM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\resource\audio-samples\99.wav" size="148538">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>LpHBDv9M70/g44xoSbGdkO85VunNjUFAxtPqymeBnag=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\sprites\brands.svg" size="469277">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>uITnCWORXIq7UTPKpNDVVByPC0STWY6UclFHuSw83uM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\sprites\regular.svg" size="109518">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>P50VEAm8sIjnzrH2BKq3gybZUVVIyIIdWtfiuW3n/4s=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\sprites\solid.svg" size="655050">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>MdqMgj/+NxmlkN2gYitViItvWERgzzUOhDHW1DGoJW0=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\webfonts\fa-brands-400.svg" size="747545">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Z5taUha735E8wi1q5Ed4we+XXuOHpsTF3ofnXRmiIjI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\webfonts\fa-regular-400.svg" size="144714">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>IyaEm2w9+iF6Dp7K7JVTyRCk4ph8hzFchQc9K5WkhPM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\static_web\webfonts\fa-solid-900.svg" size="918991">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+kmPsllqUjXFyG17aKf7526YVcAa9LDlq0HEEEfGSOA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\attentions.py" size="11789">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JcBb1Nx3c+AHPcAI0wBq+jDelZdb0jyuvTq/42EbK2k=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\commons.py" size="4759">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>KRDn2pAQsShUQd7VJJkjop5K8swDveU35lQsrAdyooc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\data_utils.py" size="15051">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>BOouUze6EbTqm6KXEkizkO+S8w0snexpPnLYuSwGSdw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\losses.py" size="1314">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>oWfztYa5s4wQHdOyVF/2qbGpMTTfEOLpQzmpczwmd58=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\mel_processing.py" size="3825">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>f7flGfMLUL7BnwqQwkTiGNilrptYGHl6tCp4sdAUmYc=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\models.py" size="19343">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>1rlhMeoRHJr3fnnsgbPZlUQpHL/wOnnkYzN8xjh2l6M=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\modules.py" size="13186">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZPTbuopxpIP09r2SEgTPfQk4rKITbmar+uQ+goA4DKI=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\requirements.txt" size="162">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>p6rPCC4nUOHI/NdM91quLIYSJK35RcdbcUDk0yxlKvM=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\synthesizer.py" size="3383">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>Sk1AHazDQXYcqXF27ETS+mk8V/i8qdY04y0tGhgTtno=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\text\__init__.py" size="1582">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>JttYGPLw2Qz5c3YzD6uYgCk6qOly/uwGQQGcVeqwpNw=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\text\cleaners.py" size="1961">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>mrD0XUlWBrxQJmwtlfLPqJ9q7lXVdQ6DnNq5fWn5AME=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\text\symbols.py" size="646">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ArwAm75wq+29udG6VFsQ1ae2RdjmulukLuOawOTCaJA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\transforms.py" size="8490">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>nZXlGGEMNVgcTxw7To7sqRt8PWiZ5/DruGoDhzlNMEY=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="GameTTS\vits\utils.py" size="6912">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>OH8A+0CeES5nuQGWsI45Klvl4UH4tyBJbbmN8e3qe0Q=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="message.ico" size="16958">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>dH/iqTvlDAA1K55QUd5dfZh3cggCcpPyfklO+Xr0ug8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\get-pip.py" size="1957374">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>+m8/uTzOI0zU6N0r61SlGrnCR2U7UoVaSN1E5rIf8os=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\requirements.txt" size="166">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>zl7MlbNWdTN+aNm97nuCwPrAULwrYx+tA2H0vw+pV8w=</dsig:DigestValue>
+    </hash>
+  </file>
+</asmv1:assembly>
