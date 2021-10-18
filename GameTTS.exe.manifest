@@ -4,7 +4,7 @@
   <description asmv2:iconFile="message.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="GameTTS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <assemblyIdentity name="GameTTS" version="1.0.0.0" publicKeyToken="8803068262B39297" language="neutral" processorArchitecture="msil" />
     <commandLine file="GameTTS.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameTTS.exe" size="25560">
-      <assemblyIdentity name="GameTTS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="GameTTS.exe" size="29008">
+      <assemblyIdentity name="GameTTS" version="1.0.0.0" publicKeyToken="8803068262B39297" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>UR/Vvh6cVIfZhHik75E/33SOHU4iiyR1g3ILlM/3qCU=</dsig:DigestValue>
+        <dsig:DigestValue>4jcOlMtNR0ULceAkoZZggzQA7wgR5iKFjIs1DbmjBpU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
