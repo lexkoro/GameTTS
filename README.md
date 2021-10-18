@@ -2,6 +2,13 @@
 
 
 ## Installation
+<<<<<<< HEAD
+  
+- Download the ZIP folder from [releases](https://github.com/lexkoro/GameTTS/releases/tag/v0.0.1) and extract it
+- Run the GameTTS.exe, it should install the required python dependencies and download the TTS model
+
+If successful, the application will start automatically.
+=======
 
 ### Python
 - Install [Python3](https://www.python.org/downloads/release/python-397/) (tested with Python 3.9) / Don't use Python 3.10
@@ -13,6 +20,7 @@
 - Run the GameTTS.exe, it should install the required python dependencies and download the required TTS model
 
 If successful, the application should start automatically.
+>>>>>>> origin/main
 
 ***The first start of the application may take a while since the TTS model has to be downloaded first (approx. 155 MB).***
 
