@@ -3,7 +3,7 @@
 
 ## Installation
   
-- Download the ZIP folder from [releases](https://github.com/lexkoro/GameTTS/releases/tag/v0.0.1) and extract it
+- Download the ZIP folder from [releases](https://github.com/lexkoro/GameTTS/releases/latest/) and extract it
 - Run the GameTTS.exe, it should install the required python dependencies and download the TTS model
 
 If successful, the application will start automatically.
