@@ -7,7 +7,7 @@ import numpy as np
 import requests
 
 # init paths
-APP_FOLDER = Path(Path(__name__).parent.resolve())
+APP_FOLDER = Path(Path(__file__).parent.parent.resolve())
 APP_CONFIG_PATH = Path(APP_FOLDER, "static_web/resource/", "app-config.json")
 SPEAKER_CONFIG = Path(
     APP_FOLDER, "static_web/resource/json-mapping/", "speaker_map.json"
