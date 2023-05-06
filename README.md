@@ -1,4 +1,6 @@
-# GameTTS
+# !! Removed trained model because of the legal situation !!
+
+# GameTTS (not working)
 
 
 ## Installation
