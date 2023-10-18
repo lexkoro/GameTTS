@@ -20,7 +20,10 @@ If successful, the application should start automatically.
 
 ### Install and Start
 
->bash gametts/run.sh
+```sh
+# bash GameTTS/run.sh  [venvpath] [browser]
+bash GameTTS/run.sh 
+```
 
 ### Set Browser
 
@@ -29,6 +32,8 @@ Default Browser is `chrome`. If this is not found, the fallback is `edge`.
 for Linux:
 Override this setting on the start with:
 main.py --browser firefox
+
+(this is the default if you run the command `bash GameTTS/run.sh`)
 
 ## References
 
