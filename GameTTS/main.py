@@ -120,12 +120,17 @@ def exit_clean_up():
         f.unlink()
     sys.exit(0)
 
-
 # start EEL App
 if __name__ == "__main__":
 
     directory = "static_web"
     app = "chrome"
+
+    if "--browser" in sys.argv:
+        pos = sys.argv.index('--browser')
+        if pos+1 < len(sys.argv): 
+            app = sys.argv[pos+1]
+
     page = "index.html"
 
     eel_kwargs = dict(
@@ -147,6 +152,7 @@ if __name__ == "__main__":
             if PLATFORM == "Windows" and int(platform.release()) >= 10:
                 eel.start(page, mode="edge", **eel_kwargs)
             else:
+                print(f'No browser found.')
                 exit_clean_up()
     except (SystemExit, MemoryError, KeyboardInterrupt):
         exit_clean_up()
